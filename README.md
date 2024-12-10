@@ -1,0 +1,2 @@
+# Finexo
+Projekti-Bit
