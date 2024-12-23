@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -19,11 +20,21 @@ const Footer = () => {
       <div style={styles.footerSection}>
         <h3 style={styles.heading}>Links</h3>
         <ul style={styles.list}>
-          <li style={styles.listItem}>Home</li>
-          <li style={styles.listItem}>About</li>
-          <li style={styles.listItem}>Services</li>
-          <li style={styles.listItem}>Why Us</li>
-          <li style={styles.listItem}>Team</li>
+          <li style={styles.listItem}>
+            <Link to="/" style={styles.link}>Home</Link>
+          </li>
+          <li style={styles.listItem}>
+            <Link to="/about" style={styles.link}>About</Link>
+          </li>
+          <li style={styles.listItem}>
+            <Link to="/service" style={styles.link}>Services</Link>
+          </li>
+          <li style={styles.listItem}>
+            <Link to="/whyus" style={styles.link}>Why Us</Link>
+          </li>
+          <li style={styles.listItem}>
+            <Link to="/team" style={styles.link}>Team</Link>
+          </li>
         </ul>
       </div>
       <div style={styles.footerSection}>
@@ -79,7 +90,12 @@ const styles = {
     cursor: 'pointer',
     transition: 'color 0.3s',
   },
-  listItemHover: {
+  link: {
+    textDecoration: 'none',
+    color: 'white',
+    transition: 'color 0.3s',
+  },
+  linkHover: {
     color: '#00bcd4',
   },
   input: {
